@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-gold-50: #fefcf0;
+  --color-gold-100: #fcf6cf;
+  --color-gold-200: #f7ea9c;
+  --color-gold-300: #f0d55e;
+  --color-gold-400: #e6bd30;
+  --color-gold-500: #c99c1c;
+  --color-gold-600: #a47614;
+  --color-gold-700: #805513;
+  --color-gold-800: #664115;
+  --color-gold-900: #553416;
+
+  --color-crimson-50: #fef2f3;
+  --color-crimson-100: #fde2e4;
+  --color-crimson-200: #fbcacf;
+  --color-crimson-300: #f7a3ab;
+  --color-crimson-400: #f2727e;
+  --color-crimson-500: #de3b4b;
+  --color-crimson-600: #c12131;
+  --color-crimson-700: #9e1724;
+  --color-crimson-800: #811520;
+  --color-crimson-900: #6b141d;
+  --color-crimson-950: #3c060b;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0c0c0e;
+  color: #f3f4f6;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Custom gorgeous scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Luxury card effect styles */
+.luxury-glass {
+  background: rgba(18, 18, 22, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.gold-glow {
+  box-shadow: 0 0 20px rgba(201, 156, 28, 0.06);
+}
+
+.crimson-glow {
+  box-shadow: 0 0 20px rgba(222, 59, 75, 0.08);
+}
+
+/* Smooth motion custom hover lines */
+.hover-gold-link {
+  position: relative;
+}
+.hover-gold-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-gold-400);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.hover-gold-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

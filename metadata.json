@@ -1,0 +1,6 @@
+{
+  "name": "Nocturne Tango Academy",
+  "description": "An elegant, interactive workspace for the prestigious LV Tango Academy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
